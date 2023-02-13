@@ -7,6 +7,18 @@ body {
   align-items: center;
 }
 
+@media (min-width: 900px) {
+  body {
+    background-image: url(gb.jpg);
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(1.jpg);
+  }
+}
+
 h1 {
   color: #ff8080;
   font-size: 5vw;
