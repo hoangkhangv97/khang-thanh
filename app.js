@@ -8,5 +8,5 @@ setInterval(() => {
   images[currentImageIndex].style.left = 0;
 }, 5000);
 
-const audio = new Audio("your-background-music.mp3");
+const audio = new Audio("test.mp3");
 audio.play();
