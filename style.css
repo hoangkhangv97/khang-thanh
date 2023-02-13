@@ -7,15 +7,15 @@ body {
   align-items: center;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   body {
     background-image: url(gb.jpg);
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   body {
-    background-image: url(1.jpg);
+    background-image: url(4.jpg);
   }
 }
 
