@@ -1,0 +1,65 @@
+body {
+  background-image: url(https://img.freepik.com/free-vector/blurred-valentine-s-day-wallpaper_23-2148819570.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #ff8080;
+  font-size: 40px;
+  animation: float 1s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #c0c0c0;
+  animation: zoomIn 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+p {
+  font-size: 20px;
+  margin: 30px;
+  text-shadow: 2px 2px #c0c0c0;
+}
+
+.image-slider {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 30px;
+  position: relative;
+}
+
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 1s ease-in-out;
