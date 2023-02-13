@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Confession of Love</title>
+  <style>
+    body {
+      background-image: url(https://img.freepik.com/free-vector/blurred-valentine-s-day-wallpaper_23-2148819570.jpg);
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      color: #ff8080;
+      font-size: 40px;
+      animation: float 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-10px);
+      }
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #c0c0c0;
+      animation: zoomIn 0.5s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    p {
+      font-size: 20px;
+      margin: 30px;
+      text-shadow: 2px 2px #c0c0c0;
+    }
+
+    .image-slider {
+      width: 600px;
+      height: 400px;
+      overflow: hidden;
+      margin-top: 30px;
+      position: relative;
+    }
+
+    .image-slider img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: left 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Love,</h1>
+    <p id="confession">I just wanted to take a moment to tell you how much I love you. You light up my life and bring joy to every moment we share together. I am so grateful to have you in my life and I promise to always cherish and love you with all my heart. Forever and always, Yours.</p>
+    <div class="image-slider">
+      <img src="https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2545.jpg" alt="Image 1">
+      <img src="https://t4.ftcdn.net/jpg/01/97/92/77/360_F_197927767_MISwwnukYrfEH7BoyWazNXLS2p32Plcb.jpg" alt="Image 2">
+      <img src="https://img.freepik.com/free-vector/watercolor-stains-abstract-background_23-2149107181.jpg" alt="Image 3">
+    </div>
+  </div>
+  <script>
+    const slider = document.querySelector('.image-slider');
+    const images = slider.querySelectorAll('img');
+    let currentImageIndex = 0;
+    images[currentImageIndex].style.left = 0;
+    
+    setInterval(() => {
+      images[currentImageIndex].style.left = '-100%';
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      images[currentImageIndex].style.left = 0;
+    }, 2000);
+  </script>
+</body>
+</html>
+
